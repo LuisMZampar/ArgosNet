@@ -1,0 +1,13 @@
+@ArgosNet_HostAddress = https://localhost:5001
+
+### Requisição para produtos
+GET {{ArgosNet_HostAddress}}/api/produtos
+Accept: application/json
+
+###
+
+### Requisição para clientes
+GET {{ArgosNet_HostAddress}}/api/clientes
+Accept: application/json
+
+###
