@@ -25,6 +25,21 @@ GET /api/clientes/{id}: Retorna um cliente pelo ID.
 
 POST /api/clientes: Adiciona um novo cliente.
 
+PUT /api/clientes/{id}: Atualiza um cliente existente.
+
+DELETE /api/clientes/{id}: Remove um cliente.
+
+Produtos
+GET /api/produtos: Retorna todos os produtos.
+
+GET /api/produtos/{id}: Retorna um produto pelo ID.
+
+POST /api/produtos: Adiciona um novo produto.
+
+PUT /api/produtos/{id}: Atualiza um produto existente.
+
+DELETE /api/produtos/{id}: Remove um produto.
+
 Diagrama UML
 
 ![ArgosNetUml](https://github.com/user-attachments/assets/2e2f641b-3bdc-45c4-abc4-270513bb36b9)
