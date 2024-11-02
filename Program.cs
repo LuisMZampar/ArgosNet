@@ -26,8 +26,7 @@ if (app.Environment.IsDevelopment())
 else
 {
     // Em produção, HTTPS Redirection é desativado
-    // Configuração adicional de HTTP
-    app.Urls.Add("http://0.0.0.0:80");
+    // A URL é definida no Dockerfile
 }
 
 app.UseCors("AllowAll");
