@@ -1,4 +1,8 @@
+using ArgosNet.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
@@ -25,8 +29,7 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    // Em produção, HTTPS Redirection é desativado
-    // A URL é definida no Dockerfile
+    app.UseHttpsRedirection();
 }
 
 app.UseCors("AllowAll");
