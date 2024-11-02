@@ -1,8 +1,4 @@
-using ArgosNet.Data;
-using Microsoft.EntityFrameworkCore;
-
 var builder = WebApplication.CreateBuilder(args);
-
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
@@ -29,7 +25,9 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    app.UseHttpsRedirection();
+    // Em produção, HTTPS Redirection é desativado
+    // Configuração adicional de HTTP
+    app.Urls.Add("http://0.0.0.0:80");
 }
 
 app.UseCors("AllowAll");
