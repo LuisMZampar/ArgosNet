@@ -18,5 +18,8 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
+# Defina o ambiente como Production
+ENV ASPNETCORE_ENVIRONMENT=Production
 ENV ASPNETCORE_URLS=http://0.0.0.0:80
+
 ENTRYPOINT ["dotnet", "ArgosNet.dll"]
